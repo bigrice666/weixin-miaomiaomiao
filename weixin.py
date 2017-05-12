@@ -43,7 +43,8 @@ if __name__ == '__main__':
     test_group = ensure_one(bot.groups().search('test_group'))
     fans_group = ensure_one(bot.groups().search('同好会'))
     zhuoyou_group = ensure_one(bot.groups().search('桌游'))
-    listening_group = [test_group] + [fans_group] + [zhuoyou_group] + bot.friends()
+    haoai_group = ensure_one(bot.groups().search('好爱'))
+    listening_group = [test_group] + [fans_group] + [zhuoyou_group] + [haoai_group] + bot.friends()
     my_self = ensure_one(bot.friends().search('蘑菇萌萌的'))
     @bot.register(chats=listening_group,except_self=False,msg_types=TEXT)
     def test_group_auto(msg):
