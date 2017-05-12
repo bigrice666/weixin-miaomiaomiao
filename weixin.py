@@ -36,6 +36,8 @@ def miaomiaomiao(content):
         return '博士(☆ω☆)屁股味！'
     if '不要你了' in content:
         return '✄╰ひ╯汪！'
+    if '旺财' in content:
+        return '呜哇~~茶！汪汪o(*≧▽≦)ツ'
 
 if __name__ == '__main__':
     bot = Bot(console_qr=-2)
