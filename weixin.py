@@ -45,7 +45,7 @@ if __name__ == '__main__':
     zhuoyou_group = ensure_one(bot.groups().search('桌游'))
     listening_group = [test_group] + [fans_group] + [zhuoyou_group] + bot.friends()
     my_self = ensure_one(bot.friends().search('蘑菇萌萌的'))
-    @bot.register(chats=[listening_group] + [fans_group] + [zhuoyou_group] + bot.friends(),except_self=False,msg_types=TEXT)
+    @bot.register(chats=listening_group,except_self=False,msg_types=TEXT)
     def test_group_auto(msg):
         return miaomiaomiao(msg.text)
     @bot.register(chats=my_self,except_self=False,msg_types=TEXT)
